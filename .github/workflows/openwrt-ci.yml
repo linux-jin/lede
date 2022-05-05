@@ -8,6 +8,8 @@
 name: OpenWrt-CI
 
 on:
+  watch:
+    type: started
   schedule:
     - cron: 0 20 * * *
   release:
@@ -21,7 +23,6 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    if: github.event.repository.owner.id == github.event.sender.id
 
     steps:
 
